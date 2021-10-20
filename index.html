@@ -1,14 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>FUNtasy Baseball League</h1>
-    <h6>Because your friend begged you to sign up.</h6>
-</body>
+<html>
+    <head>
+        <title>FunBL</title>
+        <html lang="en">
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navy-block">
+            <h1>FUNtasy Baseball League</h1>
+            <p><em>established 2015</em></p>
+            <div class="nav-bar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="https://fantasy.espn.com/baseball/league?leagueId=26811">Login</a>
+                <a href="guide.html">Guidebook</a>
+                <a href="managers.html">Managers</a>
+                <a href="history.html">History</a>
+            </div>
+        </div>
+        <div class="wrapup">
+            <div class="one">
+                <div class="figure">
+                    <img src="images/rogerstrophy.jpg" alt="Rogers With Trophy" width="90%">
+                    <p>Chris Rogers won the 2021 FunBL season, becoming the first three time champion in Funbl history!</p>
+                </div>
+            </div>
+            <div class="two">
+                <div class="thanks">Thanks for a great 2021 Season! <br></br><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <strong>&mdash;Justin</strong></p></div>
+                <div class="twentytwo">
+                    <div class="announce">
+                    Countdown To 2022 Draft:
+                    </div>
+                    <!--Insert Countdown Coding Here?-->
+                    <div class="countdown">
+                        <div id="days"></div>
+                        <div id="hours"></div>
+                        <div id="mins"></div>
+                        <div id="secs"></div>
+                        <h2 id="end"></h2>
+                        <script>
+                        // The data/time we want to countdown to
+                        var countDownDate = new Date("Mar 25, 2022 16:37:52").getTime();
+                    
+                        // Run myfunc every second
+                        var myfunc = setInterval(function() {
+                    
+                        var now = new Date().getTime();
+                        var timeleft = countDownDate - now;
+                            
+                        // Calculating the days, hours, minutes and seconds left
+                        var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+                            
+                        // Result is output to the specific element
+                        document.getElementById("days").innerHTML = days + "d "
+                        document.getElementById("hours").innerHTML = hours + "h " 
+                        document.getElementById("mins").innerHTML = minutes + "m " 
+                        document.getElementById("secs").innerHTML = seconds + "s " 
+                            
+                        // Display the message when countdown is over
+                        if (timeleft < 0) {
+                            clearInterval(myfunc);
+                            document.getElementById("days").innerHTML = ""
+                            document.getElementById("hours").innerHTML = "" 
+                            document.getElementById("mins").innerHTML = ""
+                            document.getElementById("secs").innerHTML = ""
+                            document.getElementById("end").innerHTML = "TIME UP!!";
+                        }
+                        }, 1000);
+                    </script>
+                    </div>
+                    <div class="standings">
+                        <img src="images/standings.png" alt="2021 Standings" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
